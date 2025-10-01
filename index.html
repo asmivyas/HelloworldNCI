@@ -1,1 +1,19 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hello</title>
+<style>
+body{display:grid;place-items:center;height:100vh;margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:#111;color:#e6f}
+#card{padding:28px;border-radius:12px;text-align:center;background:linear-gradient(135deg,rgba(255,255,255,0.03),transparent)}
+button{margin-top:12px;padding:8px 12px;border:0;border-radius:6px;background:#e6f;color:#111;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="card"><h1 id="msg">Hello, world!</h1><button id="btn">Change</button></div>
+<script>
+const msg=document.getElementById('msg'),btn=document.getElementById('btn');
+let i=0;btn.onclick=()=>{const s=["Hello, world!","Hi there!","Hola mundo!","नमस्ते दुनिया!"][i%4];msg.textContent=s;i++;btn.textContent="Next"}
+</script>
+</body>
+</html>
